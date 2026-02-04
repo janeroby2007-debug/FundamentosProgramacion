@@ -1,0 +1,114 @@
+Robert Rosales Janet Isabel
+Matricula: 2253332383
+
+Algoritmo calculo_ladrillos_barda
+
+Definir longitud, altura, areaTotal, totalLadrillos Como Real
+
+Escribir "Introduce el largo de la barda:"
+Leer longitud
+
+Escribir "Introduce la altura de la barda:"
+Leer altura
+
+areaTotal <- longitud * altura
+totalLadrillos <- areaTotal * 50
+
+Escribir "Cantidad estimada de ladrillos: ", totalLadrillos
+
+FinAlgoritmo
+
+////////////////////////////////////////////////////////////
+
+Algoritmo convertir_moneda
+
+Definir montoPesos, montoDolares, cambio Como Real
+cambio <- 17.5
+
+Escribir "Escribe la cantidad en pesos:"
+Leer montoPesos
+
+montoDolares <- montoPesos / cambio
+
+Escribir "Cantidad equivalente en dolares: ", montoDolares
+
+FinAlgoritmo
+
+////////////////////////////////////////////////////////////
+
+Algoritmo calcular_distancia_auto
+
+Definir vel, horas, recorrido Como Real
+
+Escribir "Ingresa la velocidad del vehiculo (km/h):"
+Leer vel
+
+Escribir "Ingresa el tiempo de recorrido (horas):"
+Leer horas
+
+recorrido <- vel * horas
+
+Escribir "Distancia total recorrida: ", recorrido, " km"
+
+FinAlgoritmo
+
+////////////////////////////////////////////////////////////
+
+Algoritmo calculo_muro_castillos
+
+Definir largoMuro, altoMuro Como Real
+Definir largoBlock, altoBlock Como Real
+Definir juntaVert, juntaHor Como Real
+Definir cantCastillos, anchoCastillo Como Real
+Definir areaMuro, areaCast, areaDisponible, numLadrillos Como Real
+
+Escribir "Ingrese el largo del muro:"
+Leer largoMuro
+Escribir "Ingrese la altura del muro:"
+Leer altoMuro
+
+areaMuro <- largoMuro * altoMuro
+
+Escribir "Ingrese el largo del ladrillo:"
+Leer largoBlock
+Escribir "Ingrese el alto del ladrillo:"
+Leer altoBlock
+Escribir "Ingrese la junta vertical:"
+Leer juntaVert
+Escribir "Ingrese la junta horizontal:"
+Leer juntaHor
+
+Escribir "Ingrese la cantidad de castillos:"
+Leer cantCastillos
+Escribir "Ingrese el ancho del castillo:"
+Leer anchoCastillo
+
+areaCast <- cantCastillos * anchoCastillo * altoMuro
+areaDisponible <- areaMuro - areaCast
+
+numLadrillos <- areaDisponible / ((largoBlock + juntaVert) * (altoBlock + juntaHor))
+
+Escribir "Ladrillos necesarios para el muro: ", numLadrillos
+
+FinAlgoritmo
+
+///////////////////////////////////////////////////////////
+
+Algoritmo volumen_loza
+
+Definir largoLoza, anchoLoza, grosor, volTotal Como Real
+
+Escribir "Introduce el largo de la loza:"
+Leer largoLoza
+
+Escribir "Introduce el ancho de la loza:"
+Leer anchoLoza
+
+Escribir "Introduce el espesor de la loza:"
+Leer grosor
+
+volTotal <- largoLoza * anchoLoza * grosor
+
+Escribir "El volumen total de la loza es: ", volTotal, " m3"
+
+FinAlgoritmo
