@@ -1,0 +1,83 @@
+Robert Rosales Janet Isabel
+Matricula: 2253332383
+
+public class Practica04 {
+
+    public static void main(String[] args) {
+
+        // ===============================
+        // ACTIVIDAD 1
+        // Mensaje simple
+        // ===============================
+        System.out.println("Mi universidad es la UAT");
+
+        // ===============================
+        // ACTIVIDAD 2
+        // Uso de print y println
+        // ===============================
+        System.out.print("Hola ");
+        System.out.print("Java ");
+        System.out.println("programadores");
+
+        System.out.println("Fila 1");
+        System.out.println("Fila 2");
+
+        // ===============================
+        // ACTIVIDAD 3
+        // Operaciones aritmeticas
+        // ===============================
+        int num1 = 10;
+        int num2 = 5;
+
+        System.out.println("Suma: " + (num1 + num2));
+        System.out.println("Resta: " + (num1 - num2));
+        System.out.println("Multiplicacion: " + (num1 * num2));
+        System.out.println("Division: " + (num1 / num2));
+
+        // ===============================
+        // ACTIVIDAD 4
+        // Uso de printf
+        // ===============================
+        double costo = 25.5;
+        int piezas = 4;
+
+        System.out.printf("Costo: %.2f\n", costo);
+        System.out.printf("Piezas: %d\n", piezas);
+
+        // ===============================
+        // ACTIVIDAD 5
+        // printf con varias variables
+        // ===============================
+        double importe = costo * piezas;
+        System.out.printf("Importe total: %.2f\n", importe);
+
+        // ===============================
+        // ACTIVIDAD 6
+        // Especificadores de formato
+        // ===============================
+        String alumno = "Veronica";
+        int anios = 19;
+
+        System.out.printf("Alumno: %s Edad: %d\n", alumno, anios);
+
+        // ===============================
+        // ACTIVIDAD 7
+        // Secuencias de escape
+        // ===============================
+        System.out.println("Hola\nJava");          // Salto de linea
+        System.out.println("Dato1\tDato2");        // Tabulador
+        System.out.println("Texto entre comillas: \"Java\"");
+        System.out.println("Barra invertida: \\");
+
+        // ===============================
+        // ACTIVIDAD 8
+        // Ejemplo final
+        // ===============================
+        int valorA = 8;
+        int valorB = 3;
+
+        System.out.printf("La suma de %d + %d es %d\n", valorA, valorB, valorA + valorB);
+        System.out.printf("El producto es: %d\n", valorA * valorB);
+
+    }
+}
