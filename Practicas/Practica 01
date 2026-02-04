@@ -1,1 +1,98 @@
+Robert Rosales Janet Isabel
+Matricula: 2253332383
 
+import java.util.Scanner;
+
+public class Ejercicio01_MuroCalculo {
+
+    public static void main(String[] args) {
+
+        Scanner lector = new Scanner(System.in);
+
+        double largoMuro, altoMuro;
+        double largoLadrillo, altoLadrillo;
+        double espesorHorizontal, espesorVertical;
+        double areaTotalMuro, areaBloque;
+        double areaCastilloTotal, areaDisponible;
+        double totalLadrillos;
+        int numCastillos;
+        double anchoCastillo;
+
+        System.out.print("Ingrese la longitud del muro (m): ");
+        largoMuro = lector.nextDouble();
+
+        System.out.print("Ingrese la altura del muro (m): ");
+        altoMuro = lector.nextDouble();
+
+        System.out.print("Ingrese el largo del ladrillo (m): ");
+        largoLadrillo = lector.nextDouble();
+
+        System.out.print("Ingrese el alto del ladrillo (m): ");
+        altoLadrillo = lector.nextDouble();
+
+        System.out.print("Ingrese el espesor de la junta horizontal (m): ");
+        espesorHorizontal = lector.nextDouble();
+
+        System.out.print("Ingrese el espesor de la junta vertical (m): ");
+        espesorVertical = lector.nextDouble();
+
+        System.out.print("Ingrese el numero de castillos: ");
+        numCastillos = lector.nextInt();
+
+        System.out.print("Ingrese la longitud de cada castillo (m): ");
+        anchoCastillo = lector.nextDouble();
+
+        areaTotalMuro = largoMuro * altoMuro;
+        areaCastilloTotal = numCastillos * anchoCastillo * altoMuro;
+        areaDisponible = areaTotalMuro - areaCastilloTotal;
+
+        areaBloque = (largoLadrillo + espesorVertical) * (altoLadrillo + espesorHorizontal);
+
+        totalLadrillos = areaDisponible / areaBloque;
+
+        System.out.println("\nCantidad aproximada de ladrillos necesarios: " + totalLadrillos);
+
+        lector.close();
+    }
+}
+
+//
+
+import java.util.Scanner;
+
+public class Ejercicio02_CalculoLosa {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        double largo, ancho, espesor;
+        double volumenConcreto;
+        double volCemento, volArena, volGrava;
+        double litrosAgua;
+
+        System.out.print("Ingrese el largo de la losa (m): ");
+        largo = entrada.nextDouble();
+
+        System.out.print("Ingrese el ancho de la losa (m): ");
+        ancho = entrada.nextDouble();
+
+        System.out.print("Ingrese el espesor de la losa (m): ");
+        espesor = entrada.nextDouble();
+
+        volumenConcreto = largo * ancho * espesor;
+
+        volCemento = volumenConcreto / 6.0;
+        volArena = volumenConcreto * 2.0 / 6.0;
+        volGrava = volumenConcreto * 3.0 / 6.0;
+        litrosAgua = volumenConcreto * 180;
+
+        System.out.println("\nVolumen total de concreto (m3): " + volumenConcreto);
+        System.out.println("Cemento necesario (m3): " + volCemento);
+        System.out.println("Arena necesaria (m3): " + volArena);
+        System.out.println("Grava necesaria (m3): " + volGrava);
+        System.out.println("Agua necesaria (litros): " + litrosAgua);
+
+        entrada.close();
+    }
+}
