@@ -1,0 +1,88 @@
+Robert Rosales Janet Isabel
+Matricula: 2253332383
+
+Algoritmo calc_area_triangulo
+
+Definir b, h, resultado Como Real
+
+Escribir "Ingresa la base del triangulo:"
+Leer b
+
+Escribir "Ingresa la altura del triangulo:"
+Leer h
+
+resultado <- (b * h) / 2
+
+Escribir "El area calculada es: ", resultado
+
+FinAlgoritmo
+
+//////////////////////////////////////////
+
+Algoritmo saludo_usuario
+
+Definir usuario Como Caracter
+
+Escribir "Escribe tu nombre:"
+Leer usuario
+
+Escribir "Bienvenido ", usuario
+
+FinAlgoritmo
+
+//////////////////////////////////////////
+
+Algoritmo evaluar_numero
+
+Definir valor Como Entero
+
+Escribir "Introduce un numero:"
+Leer valor
+
+Si valor > 0 Entonces
+	Escribir "El numero ingresado es positivo"
+SiNo
+	Escribir "El numero es cero o negativo"
+FinSi
+
+FinAlgoritmo
+
+///////////////////////////////////////////
+
+Algoritmo contador_mientras
+
+Definir contador Como Entero
+contador <- 1
+
+Mientras contador <= 5 Hacer
+	Escribir contador
+	contador <- contador + 1
+FinMientras
+
+FinAlgoritmo
+
+///////////////////////////////////////////
+
+Algoritmo contador_para
+
+Definir num Como Entero
+
+Para num <- 1 Hasta 5 Con Paso 1 Hacer
+	Escribir num
+FinPara
+
+FinAlgoritmo
+
+//////////////////////////////////////////
+
+Algoritmo contador_repetir
+
+Definir n Como Entero
+n <- 1
+
+Repetir
+	Escribir n
+	n <- n + 1
+Hasta Que n > 5
+
+FinAlgoritmo
