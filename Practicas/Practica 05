@@ -1,0 +1,173 @@
+Robert Rosales Janet Isabel
+Matricula: 2253332383
+
+public class VentaDosArticulos {
+
+    public static void main(String[] args) {
+
+        double articuloA = 25.50;
+        double articuloB = 13.75;
+        double porcentajeIva = 0.16;
+
+        double suma = articuloA + articuloB;
+        double impuesto = suma * porcentajeIva;
+        double totalPagar = suma + impuesto;
+
+        System.out.println("Articulo A: " + articuloA);
+        System.out.println("Articulo B: " + articuloB);
+        System.out.println("Subtotal: " + suma);
+        System.out.println("IVA: " + impuesto);
+        System.out.println("Total a pagar: " + totalPagar);
+    }
+}
+
+////////////////////////////////////////////////////////////////
+
+public class VentaCuatroArticulos {
+
+    public static void main(String[] args) {
+
+        double a1 = 25.5;
+        double a2 = 13.75;
+        double a3 = 40.25;
+        double a4 = 18.90;
+        double ivaAplicado = 0.16;
+
+        double subtotalCompra = a1 + a2 + a3 + a4;
+        double ivaCompra = subtotalCompra * ivaAplicado;
+        double totalCompra = subtotalCompra + ivaCompra;
+
+        System.out.println("Subtotal: " + subtotalCompra);
+        System.out.println("IVA: " + ivaCompra);
+        System.out.println("Total: " + totalCompra);
+    }
+}
+
+//////////////////////////////////////////////////////////////
+
+import javax.swing.JOptionPane;
+
+public class VentaDialogo {
+
+    public static void main(String[] args) {
+
+        double prodA = 20;
+        double prodB = 15;
+        double prodC = 30;
+        double prodD = 10;
+
+        double tasaIva = 0.16;
+
+        double parcial = prodA + prodB + prodC + prodD;
+        double ivaCalc = Math.round(parcial * tasaIva * 100) / 100.0;
+        double totalCalc = Math.round((parcial + ivaCalc) * 100) / 100.0;
+
+        JOptionPane.showMessageDialog(null,
+                "Subtotal: " + parcial +
+                "\nIVA: " + ivaCalc +
+                "\nTotal: " + totalCalc);
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+import javax.swing.JOptionPane;
+
+public class ListaProductos {
+
+    public static void main(String[] args) {
+
+        String prod1 = "Refresco";
+        String prod2 = "Papas";
+        String prod3 = "Chocolate";
+        String prod4 = "Galletas";
+
+        double precio1 = 20;
+        double precio2 = 15;
+        double precio3 = 25;
+        double precio4 = 10;
+
+        double iva = 0.16;
+
+        double subtotal = precio1 + precio2 + precio3 + precio4;
+        double ivaFinal = (int)(subtotal * iva * 100) / 100.0;
+        double totalFinal = (int)((subtotal + ivaFinal) * 100) / 100.0;
+
+        JOptionPane.showMessageDialog(null,
+                "Producto      Precio\n" +
+                prod1 + "      " + precio1 + "\n" +
+                prod2 + "      " + precio2 + "\n" +
+                prod3 + "      " + precio3 + "\n" +
+                prod4 + "      " + precio4 + "\n\n" +
+                "Subtotal: " + subtotal +
+                "\nIVA: " + ivaFinal +
+                "\nTotal: " + totalFinal);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+REINGENIERÍA
+
+a) Análisis
+El programa determina el costo total de varios artículos, aplicando el IVA correspondiente y mostrando el resultado final.
+
+b) Datos
+Entrada:
+Precio de los productos
+Salida:
+Subtotal
+IVA
+Total a pagar
+
+c) Proceso
+Sumar los precios
+Calcular el impuesto
+Obtener el total
+Mostrar resultados
+
+d) Variables
+Variable	Tipo	Descripción
+a1–a4	double	precios
+suma	double	subtotal
+iva	double	porcentaje
+impuesto	double	iva calculado
+total	double	total final
+
+e) Algoritmo casual (reescrito)
+Asignar precios
+Sumar productos
+Calcular IVA
+Sumar IVA al subtotal
+Mostrar resultados
+
+f) Algoritmo computacional
+Inicio
+Asignar precios
+subtotal = suma de productos
+ivaTotal = subtotal * 0.16
+total = subtotal + ivaTotal
+Mostrar subtotal, ivaTotal y total
+Fin
+
+g) Diagrama de flujo (PSeInt reescrito)
+Algoritmo Practica5_ventas
+
+Definir a1,a2,a3,a4,subtotal,iva,impuesto,total Como Real
+
+a1 <- 20
+a2 <- 15
+a3 <- 30
+a4 <- 10
+
+iva <- 0.16
+
+subtotal <- a1 + a2 + a3 + a4
+impuesto <- subtotal * iva
+total <- subtotal + impuesto
+
+Escribir "Subtotal: ", subtotal
+Escribir "IVA: ", impuesto
+Escribir "Total: ", total
+
+FinAlgoritmo
