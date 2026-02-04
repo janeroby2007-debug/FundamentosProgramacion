@@ -1,0 +1,243 @@
+Robert Rosales Janet Isabel
+Mtricula: 2253332383
+
+Con bufferedReader:
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class AreaRectanguloBR {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
+
+        int ladoBase;
+        float ladoAltura;
+        double resultado;
+
+        System.out.print("Captura la base: ");
+        ladoBase = Integer.parseInt(lector.readLine());
+
+        System.out.print("Captura la altura: ");
+        ladoAltura = Float.parseFloat(lector.readLine());
+
+        resultado = ladoBase * ladoAltura;
+
+        System.out.println("El area calculada es: " + resultado);
+    }
+}
+
+//////////////////////////////////////////////////////////////////
+
+Con Scanner:
+
+import java.util.Scanner;
+
+public class AreaRectanguloScanner {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int baseRect;
+        float alturaRect;
+        double areaTotal;
+
+        System.out.print("Ingresa la base: ");
+        baseRect = sc.nextInt();
+
+        System.out.print("Ingresa la altura: ");
+        alturaRect = sc.nextFloat();
+
+        areaTotal = baseRect * alturaRect;
+
+        System.out.println("Area del rectangulo: " + areaTotal);
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+Con JOptionPane:
+
+import javax.swing.JOptionPane;
+
+public class AreaRectanguloDialogo {
+
+    public static void main(String[] args) {
+
+        double b, h, area;
+
+        b = Double.parseDouble(JOptionPane.showInputDialog("Introduce la base:"));
+        h = Double.parseDouble(JOptionPane.showInputDialog("Introduce la altura:"));
+
+        area = b * h;
+
+        JOptionPane.showMessageDialog(null,
+                "El area del rectangulo es: " + area);
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+Con bufferedReader:
+
+import java.io.*;
+
+public class InvertirNumeroBR {
+
+    public static void main(String[] args) throws Exception {
+
+        BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
+
+        int numero;
+        System.out.print("Escribe un numero: ");
+        numero = Integer.parseInt(lector.readLine());
+
+        int invertido = 0;
+
+        while (numero > 0) {
+            invertido = invertido * 10 + numero % 10;
+            numero /= 10;
+        }
+
+        System.out.println("Numero invertido: " + invertido);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+Con scanner:
+
+import java.util.Scanner;
+
+public class InvertirNumeroScanner {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingresa un numero: ");
+        int valor = entrada.nextInt();
+        int resultado = 0;
+
+        while (valor > 0) {
+            resultado = resultado * 10 + valor % 10;
+            valor /= 10;
+        }
+
+        System.out.println("Numero al reves: " + resultado);
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+Con JOptionPane;
+
+import javax.swing.JOptionPane;
+
+public class InvertirNumeroDialogo {
+
+    public static void main(String[] args) {
+
+        int num = Integer.parseInt(
+                JOptionPane.showInputDialog("Introduce un numero:"));
+
+        int reverso = 0;
+
+        while (num > 0) {
+            reverso = reverso * 10 + num % 10;
+            num /= 10;
+        }
+
+        JOptionPane.showMessageDialog(null,
+                "Numero invertido: " + reverso);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+Diferencias de dias:
+
+import java.util.Scanner;
+
+public class CalculoDiferenciaDias {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int diaA, mesA, anioA;
+        int diaB, mesB, anioB;
+
+        System.out.print("Dia inicial: ");
+        diaA = sc.nextInt();
+        System.out.print("Mes inicial: ");
+        mesA = sc.nextInt();
+        System.out.print("Año inicial: ");
+        anioA = sc.nextInt();
+
+        System.out.print("Dia final: ");
+        diaB = sc.nextInt();
+        System.out.print("Mes final: ");
+        mesB = sc.nextInt();
+        System.out.print("Año final: ");
+        anioB = sc.nextInt();
+
+        int fecha1 = anioA * 360 + mesA * 30 + diaA;
+        int fecha2 = anioB * 360 + mesB * 30 + diaB;
+
+        System.out.println("Dias de diferencia: " +
+                Math.abs(fecha2 - fecha1));
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+Análisis
+El programa obtiene el área de un rectángulo usando la base y la altura proporcionadas.
+
+Datos
+Entrada:
+
+Base
+Altura
+Salida:
+Área
+
+Proceso
+
+Área = base × altura
+
+Variables
+Variable	Tipo	Descripción
+b        	Real	base
+h        	Real	altura
+r        	Real	área
+
+Algoritmo casual
+Solicitar base
+Solicitar altura
+Multiplicar valores
+Mostrar resultado
+
+Algoritmo computacional
+Inicio
+Leer base
+Leer altura
+resultado = base * altura
+Mostrar resultado
+Fin
+
+Diagrama PSeInt
+
+Algoritmo calcular_area_rectangulo
+Definir b,h,resultado Como Real
+Escribir "Ingresa la base:"
+Leer b
+Escribir "Ingresa la altura:"
+Leer h
+resultado <- b * h
+Escribir "Area del rectangulo: ", resultado
+FinAlgoritmo
