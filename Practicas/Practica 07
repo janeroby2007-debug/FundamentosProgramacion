@@ -1,6 +1,7 @@
 Robert Rosales Janet Isabel
 Ejercicio 1
 
+Pseint:
 Algoritmo Practica07_01
 	Definir num Como entero
 	Escribir "Ingresa un numero: " Sin Saltar
@@ -11,6 +12,30 @@ Algoritmo Practica07_01
 		Escribir "El numero es negativo."
 	Fin Si
 FinAlgoritmo
+
+Java:
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Practica07_01 {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        int num;
+
+        System.out.print("Ingresa un numero: ");
+        num = Integer.parseInt(br.readLine());
+
+        if (num > 0) {
+            System.out.println("El numero es positivo.");
+        } else {
+            System.out.println("El numero es negativo.");
+        }
+    }
+}
 
 
 Ejercicio 2
@@ -28,6 +53,30 @@ Algoritmo Practica07_02
 		Escribir "El número es cero."
 	FinSi
 FinAlgoritmo
+
+Java:
+import java.io.*;
+
+public class Practica07_02 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int num;
+
+        System.out.print("Ingresa un numero: ");
+        num = Integer.parseInt(br.readLine());
+
+        if (num > 0) {
+            System.out.println("El numero es positivo.");
+        } else {
+            System.out.println("El numero es negativo.");
+        }
+
+        if (num == 0) {
+            System.out.println("El número es cero.");
+        }
+    }
+}
 
 
 Ejercicio 3
@@ -50,6 +99,34 @@ Algoritmo Practica07_03
 	Fin Si
 FinAlgoritmo
 
+Java:
+import java.io.*;
+
+public class Practica07_03 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int num;
+
+        System.out.print("Ingresa un numero: ");
+        num = Integer.parseInt(br.readLine());
+
+        if (num > 0 && num % 2 == 0) {
+            System.out.println("El numero es positivo y par.");
+        }
+        if (num > 0 && num % 2 != 0) {
+            System.out.println("El numero es positivo e impar.");
+        }
+        if (num < 0 && num % 2 == 0) {
+            System.out.println("El numero es negativo y par.");
+        }
+        if (num < 0 && num % 2 != 0) {
+            System.out.println("El numero es negativo e impar.");
+        }
+    }
+}
+
+
 
 Ejercicio 4
 
@@ -67,6 +144,30 @@ Algoritmo Practica07_04
 		FinSi
 	Fin Si
 FinAlgoritmo
+
+Java:
+import java.io.*;
+
+public class Practica07_04 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int num;
+
+        System.out.print("Ingresa un numero: ");
+        num = Integer.parseInt(br.readLine());
+
+        if (num > 0) {
+            System.out.println("El numero es positivo.");
+        } else {
+            if (num < 0) {
+                System.out.println("El numero es negativo.");
+            } else {
+                System.out.println("Es cero.");
+            }
+        }
+    }
+}
 
 
 Ejercicio 5
@@ -92,6 +193,37 @@ Algoritmo Practica07_05
 	FinSi
 FinAlgoritmo
 
+Java:
+import java.io.*;
+
+public class Practica07_05 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int num;
+
+        System.out.print("Ingresa un numero: ");
+        num = Integer.parseInt(br.readLine());
+
+        if (num > 0 && num % 2 == 0) {
+            System.out.println("El numero es positivo y par.");
+        } else {
+            if (num > 0 && num % 2 != 0) {
+                System.out.println("El numero es positivo e impar.");
+            } else {
+                if (num < 0 && num % 2 == 0) {
+                    System.out.println("El numero es negativo y par.");
+                } else {
+                    if (num < 0 && num % 2 != 0) {
+                        System.out.println("El numero es negativo e impar.");
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 Ejercicio 6
 
 Algoritmo Practica07_06
@@ -110,6 +242,34 @@ Algoritmo Practica07_06
 		Escribir "Alumno no acreditado."
 	FinSi
 FinAlgoritmo
+
+Java:
+import java.io.*;
+
+public class Practica07_06 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        double parcial1, parcial2, parcial3, resultado;
+
+        System.out.print("Ingrese la calificacion del parcial 1: ");
+        parcial1 = Double.parseDouble(br.readLine());
+
+        System.out.print("Ingrese la calificacion del parcial 2: ");
+        parcial2 = Double.parseDouble(br.readLine());
+
+        System.out.print("Ingrese la calificacion del parcial 3: ");
+        parcial3 = Double.parseDouble(br.readLine());
+
+        resultado = (parcial1 + parcial2 + parcial3) / 3;
+
+        if (resultado >= 7) {
+            System.out.println("Alumno acreditado.");
+        } else {
+            System.out.println("Alumno no acreditado.");
+        }
+    }
+}
 
 
 Ejercicio 7
@@ -147,6 +307,36 @@ Algoritmo Practica07_07
 	FinSi
 FinAlgoritmo
 
+Java:
+import java.io.*;
+
+public class Practica07_07 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int dia;
+
+        System.out.print("Introduzca el numero de dia: ");
+        dia = Integer.parseInt(br.readLine());
+
+        if (dia == 1) {
+            System.out.println("Lunes");
+        } else if (dia == 2) {
+            System.out.println("Martes");
+        } else if (dia == 3) {
+            System.out.println("Miercoles");
+        } else if (dia == 4) {
+            System.out.println("Jueves");
+        } else if (dia == 5) {
+            System.out.println("Viernes");
+        } else if (dia == 6) {
+            System.out.println("Sabado");
+        } else if (dia == 7) {
+            System.out.println("Domingo");
+        }
+    }
+}
+
 
 Ejercicio 8
 
@@ -162,11 +352,90 @@ Algoritmo Practica07_08
 	Escribir "Cantidad de pesos: " canpesos
 FinAlgoritmo
 
+Java
+import java.io.*;
+
+public class Practica07_08 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        double valdolares, candolar, canpesos;
+
+        System.out.print("Escriba el valor actual del dolar: ");
+        valdolares = Double.parseDouble(br.readLine());
+
+        System.out.print("Escriba la cantidad de dolares: ");
+        candolar = Double.parseDouble(br.readLine());
+
+        canpesos = valdolares * candolar;
+
+        System.out.println("Cantidad de pesos: " + canpesos);
+    }
+}
 
 
 Ejercicio 9
 
-d
+Algoritmo Practica07_09
+	Definir precio, descuento, precioConDescuento, iva, total Como Real
+	Definir tipo Como Caracter
+	
+	Escribir "Introduzca el precio base del servicio:"
+	Leer precio
+	
+	Escribir "Introduzca el tipo de cliente (normal/profesor/alumno):"
+	Leer tipo
+
+	Si tipo = "profesor" Entonces
+		descuento = precio * 0.20
+	Sino
+		Si tipo = "alumno" Entonces
+			descuento = precio * 0.10
+		Sino
+			descuento = 0
+		FinSi
+	FinSi
+	
+	precioConDescuento = precio - descuento
+	iva = precioConDescuento * 0.16
+	total = precioConDescuento + iva
+	
+	Escribir "Descuento aplicado: " descuento " con un IVA de: " iva
+	Escribir "Con un total a pagar de: " total
+FinAlgoritmo
+
+Java:
+import java.io.*;
+
+public class Practica07_09 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        double precio, descuento, precioConDescuento, iva, total;
+        String tipo;
+
+        System.out.print("Introduzca el precio base del servicio: ");
+        precio = Double.parseDouble(br.readLine());
+
+        System.out.print("Introduzca el tipo de cliente (normal/profesor/alumno): ");
+        tipo = br.readLine();
+
+        if (tipo.equalsIgnoreCase("profesor")) {
+            descuento = precio * 0.20;
+        } else if (tipo.equalsIgnoreCase("alumno")) {
+            descuento = precio * 0.10;
+        } else {
+            descuento = 0;
+        }
+
+        precioConDescuento = precio - descuento;
+        iva = precioConDescuento * 0.16;
+        total = precioConDescuento + iva;
+
+        System.out.println("Descuento aplicado: " + descuento + " con un IVA de: " + iva);
+        System.out.println("Con un total a pagar de: " + total);
+    }
+}
 
 
 Ejercicio 10
@@ -194,6 +463,40 @@ Algoritmo Practica07_10
 	Fin Si
 FinAlgoritmo
 
+Java:
+import java.io.*;
+
+public class Practica07_10 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        double lado1, lado2, lado3;
+
+        System.out.print("Introduzca el valor del lado 1: ");
+        lado1 = Double.parseDouble(br.readLine());
+
+        System.out.print("Introduzca el valor del lado 2: ");
+        lado2 = Double.parseDouble(br.readLine());
+
+        System.out.print("Introduzca el valor del lado 3: ");
+        lado3 = Double.parseDouble(br.readLine());
+
+        if (lado1 == lado2 && lado2 == lado3) {
+            System.out.println("Es un triangulo equilatero.");
+        }
+
+        if ((lado1 == lado2 && lado2 != lado3) ||
+            (lado2 == lado3 && lado3 != lado1) ||
+            (lado1 == lado3 && lado1 != lado2)) {
+            System.out.println("El triangulo es isoceles.");
+        }
+
+        if (lado1 != lado2 && lado2 != lado3) {
+            System.out.println("Es un triangulo escaleno.");
+        }
+    }
+}
+
 
 Ejercicio 11
 
@@ -219,3 +522,37 @@ Algoritmo Practica07_11
 		Fin Si
 	FinSi
 FinAlgoritmo
+
+Java:
+import java.io.*;
+
+public class Practica07_11 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        double lado1, lado2, lado3;
+
+        System.out.print("Introduzca el valor del lado 1: ");
+        lado1 = Double.parseDouble(br.readLine());
+
+        System.out.print("Introduzca el valor del lado 2: ");
+        lado2 = Double.parseDouble(br.readLine());
+
+        System.out.print("Introduzca el valor del lado 3: ");
+        lado3 = Double.parseDouble(br.readLine());
+
+        if (lado1 == lado2 && lado2 == lado3) {
+            System.out.println("Es un triangulo equilatero.");
+        } else {
+            if ((lado1 == lado2 && lado2 != lado3) ||
+                (lado2 == lado3 && lado3 != lado1) ||
+                (lado1 == lado3 && lado1 != lado2)) {
+                System.out.println("El triangulo es isoceles.");
+            } else {
+                if (lado1 != lado2 && lado2 != lado3) {
+                    System.out.println("Es un triangulo escaleno.");
+                }
+            }
+        }
+    }
+}
